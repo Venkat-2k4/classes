@@ -231,20 +231,50 @@
 //  increasing(arrr) //?console.log("yes") : console.log("no") ;
 
 
-function minEvenDistance(arr){
-    let j = -1 ;
-    let d = Infinity
-    for(let i=0 ;i< arr.length;i++){
-        if(arr[i]%2==0){
+// function minEvenDistance(arr){
+//     let j = -1 ;
+//     let d = Infinity
+//     for(let i=0 ;i< arr.length;i++){
+//         if(arr[i]%2==0){
 
-            if(j!=-1)d= Math.min(d,i-j)
-            j=i;
-        }
+//             if(j!=-1)d= Math.min(d,i-j)
+//             j=i;
+//         }
+//     }
+//     return d;
+//     if(d == Infinity ) return -1
+// }
+// const arr = [5,4,3,1,2,7,6]
+
+// console.log(minEvenDistance(arr))
+// console.log(9/5)
+
+
+
+function thirdLargets(arr){
+let maxi=-Infinity,maxi2=-Infinity,maxi3=-Infinity;
+for(let i=0;i<arr.length;i++){
+  //  if(maxi === arr[i] || maxi2 === arr[i] || maxi3===arr[i]) continue;
+    if(maxi<arr[i]){
+        maxi3 = maxi2;
+        maxi2 = maxi //99
+        maxi  = arr[i]//99
+    }else if(arr[i]<maxi && arr[i] > maxi2){
+        maxi3 = maxi2
+        maxi2 = arr[i];
+    }else if (arr[i] < maxi2 && arr[i] > maxi3 ){
+        maxi3 =arr[i];
     }
-    return d;
-    if(d == Infinity ) return -1
 }
-const arr = [5,4,3,1,2,7,6]
+return [maxi, maxi2 ,maxi3]
+}
+const arr=[11,22,99,33,44, 55, 66, 77,88,88]
+console.log(thirdLargets(arr))
 
-console.log(minEvenDistance(arr))
-console.log(9/5)
+
+function rev(string){
+    let res = string.split("").reverse().join("");
+    return res === string
+}
+console.log(rev("madam"));
+
