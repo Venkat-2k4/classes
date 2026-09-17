@@ -105,7 +105,7 @@
 // console.log(asciiArray(ascii,str));
 // const ascii =new Array(256).fill(-1);
 
-str = "hello"
+// str = "hello"
 // function asciiArray(ascii,str){
 // let res = ""
 //     for(let i=0;i<str.length;i++){

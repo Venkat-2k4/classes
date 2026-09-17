@@ -84,19 +84,25 @@
 // arr =['c','d','e']
 // console.log(splicing(arr ,1,'a','b'))
 
-function swapping(arr){
-    let i = 0
-    let j = arr.length-1;
-    while(i<j){
-        let temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-        i++;
-        j--
-    }
-    return arr
+// function swapping(arr){
+//     let i = 0
+//     let j = arr.length-1;
+//     while(i<j){
+//         let temp = arr[i];
+//         arr[i] = arr[j];
+//         arr[j] = temp;
+//         i++;
+//         j--
+//     }
+//     return arr
 
+// }
+//     const arr= [1,2,3,4,5];
+//     console.log(swapping(arr))
+
+// console.log(arr.includes(2))
+
+console.log(sq(4));
+function sq(n){
+    return n*n;
 }
-    const arr= [1,2,3,4,5];
-    console.log(swapping(arr))
-

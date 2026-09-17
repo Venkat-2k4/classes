@@ -385,3 +385,277 @@
 // **Input:** `[-2, 1, -3, 4, -1, 2, 1, -5, 4]`
 // **Output:** `6`
 
+// function maxSum(arr){
+//     let maxsum = -Infinity;
+//     for(let i =0;i<arr.length;i++){
+//         let sum =0;
+//         for(let j =i ;j<arr.length;j++ ){
+//             sum+=arr[j];
+//             maxsum = Math.max(sum ,maxsum);
+//         }
+//     }
+//     return maxsum
+// }
+
+// console.log(maxSum([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
+
+// function maxSum(arr){
+//     let maxsum = arr[0];
+//     sum = 0;
+//     for(let num of arr){
+//         sum +=num;
+//         maxsum =Math.max(sum ,maxsum);
+//         if(sum <0){
+//             sum=0;
+//         }
+//     }
+//     return maxsum;
+    
+// }
+// console.log(maxSum([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
+
+// ### 18. Find All Pairs with Sum K
+
+// Find all pairs of numbers whose sum is equal to K.
+
+// **Input:** `[1, 2, 3, 4, 5], k = 6`
+// **Output:** `[[1, 5], [2, 4]]`
+
+// function  findPairs(arr , k){
+//     let res = []
+//     for(let i=0;i<arr.length-1;i++){
+//         for(let j= i+1 ;j<arr.length ;j++){
+//             if( arr[i] +arr[j] == k){
+//                 res.push([arr[i] ,arr[j]])
+//             }
+//         }
+//     }
+//     return res
+// }
+// console.log(findPairs([1, 2, 3, 4, 5],6))
+
+//++++++++++++ questions+++++++++++++++++
+// const arr = [
+//   ["name", "John"],
+//   ["age", 25],
+//   ["city", "Delhi"]
+// ];
+
+// Output:
+
+// {
+//   name: "John",
+//   age: 25,
+//   city: "Delhi"
+// }
+
+
+// function arrayToObject(arr){
+//     let obj ={};
+//     for(let i=0 ;i<arr.length ;i++){
+//         obj[arr[i][0] ]= arr[i][1]
+//     }
+//     return obj
+// }
+// console.log(arrayToObject(arr))
+
+// console.log(arr[0][1])
+
+// .Given an object where each property contains another object, flatten it into a single object.
+// Input:-                        -> 11.51 - 12.12   Solved   => 10
+
+// Output:-
+
+// {
+    //   name: "John",
+//   age: 25,
+//   city: "Hyderabad",
+//   country: "India"
+// }
+// let obj ={
+//   user: {
+//     name: "John",
+//     age: 25
+//   },
+//   address: {
+//     city: "Hyderabad",
+//     country: "India"
+//   }
+// }
+// function flats(){
+//     let res ={}
+//     Object.assign(res,{role:"developer"})
+//     for(let value of Object.values(obj)){
+//         Object.assign(res, value);
+//     }
+//     console.log(res)
+// }
+// flats(obj)
+
+// Create an array of employee objects with name, age, and dep properties, and group the employees based on their age.
+                                                                   
+// Input:-
+
+
+// Output:-
+// {
+//   22: [
+//     { name: "Shubham", age: 22, dep: "IT" },
+//     { name: "Amit", age: 22, dep: "Finance" }
+//   ],
+//   23: [
+//     { name: "Neha", age: 23, dep: "HR" }
+//   ],
+//   24: [
+//     { name: "Rahul", age: 24, dep: "HR" },
+//     { name: "Priya", age: 24, dep: "IT" }
+//   ]
+// }
+// const employees = [
+//   { name: "Shubham", age: 22, dep: "IT" },
+//   { name: "Rahul", age: 24, dep: "HR" },
+//   { name: "Amit", age: 22, dep: "Finance" },
+//   { name: "Priya", age: 24, dep: "IT" },
+//   { name: "Neha", age: 23, dep: "HR" }
+// ];
+
+// let obj =Object.groupBy(employees,(item)=>item.age)
+// console.log(obj)
+
+// Given two strings, write a program to check whether they are anagrams of each other using an Object (frequency counter).
+
+// Example:
+
+// Input: "listen", "silent"
+// Output: true
+
+// Example:
+
+// Input: "hello", "world"
+// Output: false
+
+// function isAnagram(str1 , str2){
+//     let res ={}
+//     let res2 ={}
+//     if(str1.length != str2.length) return false
+//     for(let i =0 ;i<str1.length;i++){
+//         if(res.hasOwnProperty(str1[i])){
+//             res[str1[i]]++;
+//         }else{
+//             res[str1[i]] = 1;
+//         }
+//     }
+//     for(let i =0 ;i<str2.length;i++){
+//         if(res2.hasOwnProperty(str2[i])){
+//             res2[str2[i]]++;
+//         }else{
+//             res2[str2[i]] = 1;
+//         }
+//     }
+//     for(let [key,value] of Object.entries(res)){
+//         if(res2.hasOwnProperty(key) && res2[key] ==value){
+//             continue
+//         }else{
+//             return false
+//         }
+//     }
+//     return true    
+// }
+// console.log(isAnagram("theeyes","theysee"))
+
+// console.log(Math.floor(5/2))
+
+const mat = [
+    [1,2,3,4],
+    [5,6,7,8],
+    [9,10,11]
+    [12,13,14],
+]
+
+// for(let i=0;i<5;i++){
+//     process.stdout.write(" ")
+//     for(let j= 0;j<5;j++){
+//         if(j<i){
+//             process.stdout.write(" ")
+//         }else{
+//             process.stdout.write("*")
+
+//         }
+//     }
+//     console.log("")
+// }
+
+
+// function lower(n){
+// for(let i=0;i<n;i++){
+//     let str = ""
+//     for(let j= 0;j<n;j++){
+//         if(j<i){
+//             str+=" "
+//         }else{
+//             str+="* "
+
+//         }
+//     }
+//     console.log(str)
+   
+// }
+// }
+
+// function uppper(n){
+// for(let i=0;i<n;i++){
+//     let str = ""
+//     for(let j= 0;j<n;j++){
+//         if(j<n-i){
+//             str+=" "
+//         }else{
+//             str+="* "
+
+//         }
+//     }
+//     console.log(str)
+   
+// }
+// }
+// uppper(5)
+// lower(5)
+
+// const arr =[
+//     [1, 2, 3, 4],
+//     [5, 6 ,7 ,8],
+//     [9, 10, 11 ,12],
+//     [13,14,15,16]]
+
+// function spiralTraversal(arr){
+//     let direction = "right"
+//     let row =0;
+//     let col=0;
+// for(let i =0 ; i< arr.length ;i++){
+
+//     if(direction == "right"){
+//         for(let j =0 ;j<arr[row].length;j++){
+//             console.log(arr[row][j])
+//         }
+//         col = arr[i].length-1;
+//         row = i+1;
+//         direction = "down"
+//     }else if(direction=="down"){
+//         for(row ; row <arr.length ;row++){
+//             console.log(arr[row][col])
+//         }
+//         row = arr.length-1;
+//         col = arr[i].length-2;
+//         direction = "left"
+//     }else if(direction =="left"){
+//         for(col;col>=0;col--){
+//             console.log(arr[row][col])
+//         }
+//         row-=1;
+//         col= 
+//     }
+
+
+// }
+// }
+// spiralTraversal(arr)
+
