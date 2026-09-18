@@ -659,3 +659,48 @@ const mat = [
 // }
 // spiralTraversal(arr)
 
+// function binarySearch(arr,target){
+//     let left =0;
+//     let right = arr.length-1;
+//     let index=-1
+//     while(left<=right){
+//         let mid = Math.floor((left+right)/2)
+        
+//         if(arr[mid] <= target){
+//             left = mid+1            
+//         }else{
+//             index = mid
+//             right = mid-1
+//         }
+//     }
+//     return index  
+// }
+
+// console.log(binarySearch([1,2,3,4,6,7,8] , 5))
+
+function isAnagram(str1, str2){
+    let obj ={};
+    for(let i of str1) {
+        if(Object.hasOwn(obj,i)){
+            obj[i] = obj[i]+1
+        }else{
+            obj[i] = 1 
+        }
+    }
+    for(let i of str2) {
+        if(Object.hasOwn(obj,i)){
+            obj[i] = obj[i]-1
+        }else{
+            return false 
+        }
+    }
+    for(let [key ,value] of Object.entries(obj) ){
+        if(value!==0){
+            return false
+        }
+    }
+
+
+    return true
+}
+console.log(isAnagram("Tom Marvolo Riddle" , " Iam Lord Voldemort"))
