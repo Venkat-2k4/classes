@@ -42,3 +42,10 @@ let set = new Set();
 set.add(obj)
 set.add(anotherObj)
 console.log(set)
+
+const thirdObj = anotherObj;
+set.add(thirdObj);
+console.log(set)
+let map = new Map();
+map.set("name","dev");
+console.log(map.has("name"))

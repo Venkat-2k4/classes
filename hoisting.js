@@ -25,4 +25,3 @@
 // let cart =["Product A", "Product B", "Product C"]
 // console.log( deleteAllElements(cart))
 
-

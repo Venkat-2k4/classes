@@ -704,3 +704,4 @@ function isAnagram(str1, str2){
     return true
 }
 console.log(isAnagram("Tom Marvolo Riddle" , " Iam Lord Voldemort"))
+
