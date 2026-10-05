@@ -2,34 +2,34 @@
 // let arr2 = [1,3,5,6,7]
 // //[1,2,3,4,5,6,6,7]
 
-// function mergeSortedArrays(arr,arr2){
-// let i = 0 ;
-// let j = 0;
-// let res = []
-// while(i<arr.length && j<arr2.length){
-//     if(arr[i] < arr2[j]){
-//         res.push(arr[i])
-//         i++
-//     }else{
-//         res.push(arr2[j])
-//         j++
-//     }
-// }
+function mergeSortedArrays(arr,arr2){
+let i = 0 ;
+let j = 0;
+let res = []
+while(i<arr.length && j<arr2.length){
+    if(arr[i] < arr2[j]){
+        res.push(arr[i])
+        i++
+    }else{
+        res.push(arr2[j])
+        j++
+    }
+}
 
-//     while(j<arr2.length){
-//         res.push(arr2[j])
-//         j++
-//     }
+    while(j<arr2.length){
+        res.push(arr2[j])
+        j++
+    }
 
-//     while(i<arr.length){
-//         res.push(arr[i])
-//         i++
-//     }
+    while(i<arr.length){
+        res.push(arr[i])
+        i++
+    }
 
 
 
-//     return res
-// }
+    return res
+}
 
 
 // console.log(mergeSort(arr,arr2))
@@ -47,7 +47,7 @@ function mergeSort(arr){
     left = mergeSort(left);
     right  = mergeSort(right)
     
-    console.log(left,right)
+    return mergeSortedArrays(left,right)
     
 }
-mergeSort([2,1,4,3,7,9,8,6])
+console.log(mergeSort([2,1,4,3,7,9,8,6]))
