@@ -76,33 +76,33 @@
 // console.log(mapping([1,2,3,4,5])) 
 //
 
-const users = [{name : "gin" },{name:"zura"},{name:"shin"}]
+// const users = [{name : "gin" },{name:"zura"},{name:"shin"}]
 
-const res =users.map((val,index)=>{
-    val.age = index;
-    return val
-} )
- console.log(res)
+// const res =users.map((val,index)=>{
+//     val.age = index;
+//     return val
+// } )
+//  console.log(res)
 
- function customMap(arr , callback){
-    const rearr = new Array(arr.length).fill(undefined)
-    for(let i = 0;i<arr.length ; i++){
-        rearr[i] = callback(arr[i])
-    }
-    return rearr
- }
+//  function customMap(arr , callback){
+//     const rearr = new Array(arr.length).fill(undefined)
+//     for(let i = 0;i<arr.length ; i++){
+//         rearr[i] = callback(arr[i])
+//     }
+//     return rearr
+//  }
 
- console.log(customMap([1,2,3,4,5] , (i)=>i+i))
+//  console.log(customMap([1,2,3,4,5] , (i)=>i+i))
 
- function customFilter(arr , callback){
-    const res = new Array
-    for(let i =0;i<arr.length;i++){
-        if(callback(arr[i])) res.push(arr[i])
-    }
-    return res  
-}
+//  function customFilter(arr , callback){
+//     const res = new Array
+//     for(let i =0;i<arr.length;i++){
+//         if(callback(arr[i])) res.push(arr[i])
+//     }
+//     return res  
+// }
 
-console.log(customFilter([1,2,3,4,5,6],(i)=>i%2==0))
+// console.log(customFilter([1,2,3,4,5,6],(i)=>i%2==0))
 
 const emp = [
     {name : "ven" , pay:80000},
@@ -111,9 +111,26 @@ const emp = [
 
 ]
 
-console.log(emp.filter((val)=>
-    val.pay >50000
-).map((v)=>{v.pay =v.pay-20000 
-    return v
-}))
+// console.log(emp.filter((val)=>
+//     val.pay >50000
+// ).map((v)=>{v.pay =v.pay-20000 
+//     return v
+// }))
+// //
 
+
+// console.log([1,2,3,4,5].reduce((sum,num)=>sum*num))
+
+// console.log(emp.reduce((highest,current)=>{
+//     return Math.max(highest,current.pay)
+// },-Infinity))
+
+// function fib(n){
+      
+// }
+//
+str = "venkat"
+console.log(str[0])
+
+    
+hgjhgjhfhj
