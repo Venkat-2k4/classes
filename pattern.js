@@ -15,3 +15,7 @@ function pyramid(n){
 pyramid(5)
 
 console.log(Math.floor(5/2)+1)
+
+
+
+
